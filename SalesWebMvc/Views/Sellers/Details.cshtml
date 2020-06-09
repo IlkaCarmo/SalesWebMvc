@@ -1,0 +1,53 @@
+﻿@model SalesWebMvc.Models.ViewModels.Seller
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@ViewData["Title"]</h2>
+<div>
+
+    <h4>Seller</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Name)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Email)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.BirthDate)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.BaseSalary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.BaseSalary)
+
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Department)
+        </dt>
+        <dd>
+            @Html.DisplayFor(Model => Model.Department.Name)
+
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-default">Edit</a>
+    <a asp-action="Index">Bak to list</a>
+</div>
