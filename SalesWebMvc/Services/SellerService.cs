@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using SalesWebMvc.Models;
 using SalesWebMvc.Models.ViewModels;
 using SalesWebMvc.Services.Exceptions;
-using System.Data.Entity;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -33,7 +32,7 @@ namespace SalesWebMvc.Services
 
          public async Task<Seller> FindByIdAsync(int id)
         {
-            return await _context.Seller.Include(obj => obj.Department).FirstOrDefaultAsync(obj => obj.Id == id);
+            return await _context.Seller.Include(obj => obj.Department).FirstOrDefaultAsync(obj => obj.ID == id);
         }
             
         public async Task RemoveAsync(int id)
